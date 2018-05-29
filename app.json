@@ -1,0 +1,26 @@
+{
+  "name": "Mixpanel People Delete",
+  "description": "A simple script that resets your Mixpanel People quota.",
+  "repository": "https://github.com/lionheart/mixpanel-people-delete",
+  "keywords": ["mixpanel"],
+  "addons": [
+    "scheduler", {
+      "plan": "standard"
+    }
+  ],
+  "env": {
+    "MIXPANEL_SECRET_0": {
+      "description": "The Mixpanel project's secret.",
+      "required": "true"
+    }
+    "MIXPANEL_TOKEN_0": {
+      "description": "The Mixpanel project's token.",
+      "required": "true"
+    }
+    "NUM_PROJECTS": {
+      "description": "The number of Mixpanel People projects you want to reset. If this number is greater than 1, add additional environment variables for each project (e.g., `MIXPANEL_SECRET_1` and `MIXPANEL_TOKEN_1` should be set if this value is set to `2`).",
+      "value": "1"
+      "required": "true"
+    }
+  }
+}
